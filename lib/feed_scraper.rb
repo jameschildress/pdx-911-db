@@ -1,6 +1,12 @@
 require 'rubygems'
 require 'bundler/setup'
+
 require 'pg'
+
+require 'uri'
+require 'cgi'
+require 'net/http'
+require 'rexml/document'
 
 
 
@@ -34,6 +40,9 @@ module PDX911
     }
     
     
+    API_URI = URI.parse('http://www.portlandonline.com/scripts/911incidents.cfm')
+    
+    
     
     
     # Convenience method for running code within a database connection.
@@ -54,6 +63,13 @@ module PDX911
           db.exec "CREATE TABLE #{table_name} ( #{columns} )"
         end
       end
+    end
+    
+    
+    # Send an HTTP GET request to the 911 dispatch feed and return the response as XML.
+    def self.api_response_xml
+      response = Net::HTTP.get(API_URI.host, API_URI.path)
+      REXML::Document.new response
     end
 
 
