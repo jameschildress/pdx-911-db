@@ -14,7 +14,7 @@ module PDX911
 
 
     # Send an HTTP GET request to the 911 dispatch feed and return the response.
-    def self.response
+    def self.fetch_response
       uri = URI.parse(URL)
       response = Net::HTTP.get(uri.host, uri.path)
     end
