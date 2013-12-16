@@ -38,12 +38,35 @@ module PDX911
       db.exec "CREATE UNIQUE INDEX ON #{table_name} (#{index_column_name})"
     end
     
+    # Iterate through the rows of a PG::Result and return an array of Records.
+    def self.init_from_result pg_result
+      pg_result.to_a.map do |hash|
+        self.new hash
+      end
+    end
+        
     def self.all db
-      db.exec("SELECT * FROM #{table_name}").to_a
+      init_from_result db.exec("SELECT * FROM #{table_name}")
     end
     
     def self.find_by_index db, value
-      db.exec_params("SELECT * FROM #{table_name} WHERE #{index_column_name} IN ($1)", [value]).to_a
+      init_from_result db.exec_params("SELECT * FROM #{table_name} WHERE #{index_column_name} IN ($1)", [value])
+    end
+
+    
+    
+    
+    def initialize hash
+      (self.class.schema.keys << :id).each do |column|
+         define_singleton_method(column) { hash[column.to_s] }
+      end
+    end
+    
+    def inspect
+      attrs = (self.class.schema.keys << :id).map do |column|
+        "#{column}: #{send(column)}"
+      end
+      "<#{self.class} {#{attrs.join(', ')}}>"
     end
     
     
