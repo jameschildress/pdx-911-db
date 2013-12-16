@@ -12,8 +12,9 @@ module PDX911
 
     def self.connect
       db = PG::Connection.open(CONNECTION_SETTINGS)
-      yield db
+      result = yield(db)
       db.close
+      result
     end
         
     def self.create_tables force_drop=false

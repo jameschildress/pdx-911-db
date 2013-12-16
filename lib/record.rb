@@ -27,19 +27,23 @@ module PDX911
     
     
     
+    # Create the database table for this record.
+    # - A primary key of 'id' is added to the table columns.
+    # - A unique index is created for the record's index_column_name.
+    # If 'force_drop' is true, the existing database table will be dropped.
     def self.create_table db, force_drop=false
-      schema_string = schema.map { |k, v| "#{k} #{v}" }.join(', ')
+      schema_string = schema.merge({ id: 'SERIAL PRIMARY KEY' }).map { |k, v| "#{k} #{v}" }.join(', ')
       db.exec("DROP TABLE IF EXISTS #{table_name}") if force_drop
       db.exec "CREATE TABLE #{table_name} ( #{schema_string} )"
       db.exec "CREATE UNIQUE INDEX ON #{table_name} (#{index_column_name})"
     end
     
     def self.all db
-      db.exec_params "SELECT * FROM $1", [table_name]        
+      db.exec("SELECT * FROM #{table_name}").to_a
     end
     
-    def self.find_or_create db, index_column_value
-
+    def self.find_by_index db, value
+      db.exec_params("SELECT * FROM #{table_name} WHERE #{index_column_name} IN ($1)", [value]).to_a
     end
     
     
