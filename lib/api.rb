@@ -1,15 +1,9 @@
-require 'uri'
-require 'cgi'
-require 'net/http'
-
-
-
-
 module PDX911
   class API
 
-    URL = 'http://www.portlandonline.com/scripts/911incidents.cfm'
 
+
+    URL = 'http://www.portlandonline.com/scripts/911incidents.cfm'
 
 
 
@@ -18,7 +12,6 @@ module PDX911
       uri = URI.parse(URL)
       response = Net::HTTP.get(uri.host, uri.path)
     end
-
 
 
 

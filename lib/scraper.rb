@@ -1,15 +1,5 @@
-require 'rexml/document'
-require 'cgi'
-
-require_relative 'database'
-require_relative 'api'
-
-
-
-
 module PDX911
   class Scraper
-    
     
     
     
@@ -25,7 +15,6 @@ module PDX911
         location      = entry_node.elements['georss:point'].text
       end
     end
-    
     
     
     
