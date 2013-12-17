@@ -55,7 +55,7 @@ module PDX911
 
     
     
-    
+    # Create a getter method for each column in the schema.
     def initialize hash
       (self.class.schema.keys << :id).each do |column|
          define_singleton_method(column) { hash[column.to_s] }

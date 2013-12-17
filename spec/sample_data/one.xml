@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss">
+	<id>urn:uuid:2c8b4910-e5c4-11de-8a39-0800200c9a66</id>
+	<title>Portland 911 Dispatch Incidents</title>
+	<subtitle>Recent 911 dispatch incidents in Portland, Oregon </subtitle>
+	<link href="http://www.portlandonline.com/scripts/911incidents.cfm" rel="self"/>
+	<updated>2013-12-16T16:20:33.860-08:00</updated>
+	<author>
+		<name>City of Portland</name>
+		<email>cgis@portlandoregon.gov</email>
+	</author>
+	<icon>http://www.portlandonline.com/omf/index.cfm?c=39247&amp;a=87997</icon>
+	
+  
+  
+    <entry>
+      <id>tag:portlandonline.com,2013-12-16:cad-incidents/PP13000410538</id>
+      <title>UNWANTED PERSON at 1000 BLOCK OF SW YAMHILL ST, PORTLAND, OR</title>
+      <updated>2013-12-16T16:04:09.0-08:00</updated>
+      <summary>UNWANTED PERSON at 1000 BLOCK OF SW YAMHILL ST, PORTLAND, OR [Portland Police #PP13000410538]</summary>
+      <category label="UNWANTED PERSON" term="UNWANTED PERSON"/>
+      <published>2013-12-16T15:54:04.0-08:00</published>
+      
+      <georss:point>45.519650 -122.682966</georss:point>
+      
+      <content type="html">
+          &lt;dl&gt;
+            &lt;dt&gt;ID:&lt;/dt&gt;
+            &lt;dd&gt;PP13000410538&lt;/dd&gt;
+            &lt;dt&gt;Call Type:&lt;/dt&gt;
+            &lt;dd&gt;UNWANTED PERSON&lt;/dd&gt;
+            &lt;dt&gt;Address:&lt;/dt&gt;
+            &lt;dd&gt;1000 BLOCK OF SW YAMHILL ST, PORTLAND, OR&lt;/dd&gt;
+            &lt;dt&gt;Agency:&lt;/dt&gt;
+            &lt;dd&gt;Portland Police&lt;/dd&gt;
+            &lt;dt&gt;Last Updated:&lt;/dt&gt;
+            &lt;dd&gt;12/16/13 4:04:09 PM PST&lt;/dd&gt;
+          &lt;/dl&gt;
+      </content>
+
+
+    </entry>
+	
+	
+  
+    <entry>
+      <id>tag:portlandonline.com,2013-12-16:cad-incidents/PG13000069877</id>
+      <title>THEFT - COLD at 19400 BLOCK OF E BURNSIDE ST, GRESHAM, OR</title>
+      <updated>2013-12-16T16:01:01.0-08:00</updated>
+      <summary>THEFT - COLD at 19400 BLOCK OF E BURNSIDE ST, GRESHAM, OR [Gresham Police #PG13000069877]</summary>
+      <category label="THEFT - COLD" term="THEFT - COLD"/>
+      <published>2013-12-16T15:50:59.0-08:00</published>
+      
+      <georss:point>45.517010 -122.463297</georss:point>
+      
+      <content type="html">
+          &lt;dl&gt;
+            &lt;dt&gt;ID:&lt;/dt&gt;
+            &lt;dd&gt;PG13000069877&lt;/dd&gt;
+            &lt;dt&gt;Call Type:&lt;/dt&gt;
+            &lt;dd&gt;THEFT - COLD&lt;/dd&gt;
+            &lt;dt&gt;Address:&lt;/dt&gt;
+            &lt;dd&gt;19400 BLOCK OF E BURNSIDE ST, GRESHAM, OR&lt;/dd&gt;
+            &lt;dt&gt;Agency:&lt;/dt&gt;
+            &lt;dd&gt;Gresham Police&lt;/dd&gt;
+            &lt;dt&gt;Last Updated:&lt;/dt&gt;
+            &lt;dd&gt;12/16/13 4:01:01 PM PST&lt;/dd&gt;
+          &lt;/dl&gt;
+      </content>
+
+
+    </entry>
+	
+  
+	
+    <entry>
+      <id>tag:portlandonline.com,2013-12-16:cad-incidents/PP13000410477</id>
+      <title>THEFT - COLD at 1100 BLOCK OF NE 80TH AVE, PORTLAND, OR</title>
+      <updated>2013-12-16T15:31:09.0-08:00</updated>
+      <summary>THEFT - COLD at 1100 BLOCK OF NE 80TH AVE, PORTLAND, OR [Portland Police #PP13000410477]</summary>
+      <category label="THEFT - COLD" term="THEFT - COLD"/>
+      <published>2013-12-16T15:11:16.0-08:00</published>
+      
+      <georss:point>45.531446 -122.580687</georss:point>
+      
+      <content type="html">
+          &lt;dl&gt;
+            &lt;dt&gt;ID:&lt;/dt&gt;
+            &lt;dd&gt;PP13000410477&lt;/dd&gt;
+            &lt;dt&gt;Call Type:&lt;/dt&gt;
+            &lt;dd&gt;THEFT - COLD&lt;/dd&gt;
+            &lt;dt&gt;Address:&lt;/dt&gt;
+            &lt;dd&gt;1100 BLOCK OF NE 80TH AVE, PORTLAND, OR&lt;/dd&gt;
+            &lt;dt&gt;Agency:&lt;/dt&gt;
+            &lt;dd&gt;Portland Police&lt;/dd&gt;
+            &lt;dt&gt;Last Updated:&lt;/dt&gt;
+            &lt;dd&gt;12/16/13 3:31:09 PM PST&lt;/dd&gt;
+          &lt;/dl&gt;
+      </content>
+
+
+		</entry>
+	
+    <entry>
+      <id>tag:portlandonline.com,2013-12-16:cad-incidents/PP13000410491</id>
+      <title>UNWANTED PERSON at 17100 BLOCK OF SE POWELL BLVD, PORTLAND, OR</title>
+      <updated>2013-12-16T15:23:32.0-08:00</updated>
+      <summary>UNWANTED PERSON at 17100 BLOCK OF SE POWELL BLVD, PORTLAND, OR [Portland Police #PP13000410491]</summary>
+      <category label="UNWANTED PERSON" term="UNWANTED PERSON"/>
+      <published>2013-12-16T15:09:58.0-08:00</published>
+      
+      <georss:point>45.491989 -122.488314</georss:point>
+      
+      <content type="html">
+          &lt;dl&gt;
+            &lt;dt&gt;ID:&lt;/dt&gt;
+            &lt;dd&gt;PP13000410491&lt;/dd&gt;
+            &lt;dt&gt;Call Type:&lt;/dt&gt;
+            &lt;dd&gt;UNWANTED PERSON&lt;/dd&gt;
+            &lt;dt&gt;Address:&lt;/dt&gt;
+            &lt;dd&gt;17100 BLOCK OF SE POWELL BLVD, PORTLAND, OR&lt;/dd&gt;
+            &lt;dt&gt;Agency:&lt;/dt&gt;
+            &lt;dd&gt;Portland Police&lt;/dd&gt;
+            &lt;dt&gt;Last Updated:&lt;/dt&gt;
+            &lt;dd&gt;12/16/13 3:23:32 PM PST&lt;/dd&gt;
+          &lt;/dl&gt;
+      </content>
+
+
+    </entry>
+  
+	
+</feed>
