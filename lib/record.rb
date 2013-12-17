@@ -52,6 +52,10 @@ module PDX911
     def self.find_by_index db, value
       init_from_result db.exec_params("SELECT * FROM #{table_name} WHERE #{index_column_name} IN ($1)", [value])
     end
+    
+    def self.find_by_id db, value
+      init_from_result db.exec_params("SELECT * FROM #{table_name} WHERE id IN ($1)", [value])      
+    end
 
     
     
