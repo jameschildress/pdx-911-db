@@ -13,7 +13,8 @@ module PDX911
         agency_id:   'int',
         location:    'point',
         uid:         'varchar(30)',
-        address:     'varchar(200)' 
+        address:     'varchar(200)',
+        date:        'timestamp with time zone'
       }
     end
     
