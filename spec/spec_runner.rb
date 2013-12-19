@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require "#{__dir__}/../lib/pdx911"
+require "#{__dir__}/../lib/pdx911/pdx911"
 
 Dir["#{__dir__}/tests/**/*.rb"].each do |file|
   require file
