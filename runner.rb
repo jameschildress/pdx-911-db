@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'lib/scraper'
+require_relative 'lib/pdx911'
 
 logger = Logger.new('pdx911.log', 10, 1024000)
 logger.level = Logger::INFO
