@@ -3,6 +3,7 @@ require 'cgi'
 require 'net/http'
 require 'rexml/document'
 require 'date'
+require 'logger'
 
 require 'rubygems'
 require 'bundler/setup'

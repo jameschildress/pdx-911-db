@@ -3,8 +3,9 @@ module PDX911
     
     
     
-    def self.run
+    def self.run(logger=Logger.new(STDOUT))
       xml = REXML::Document.new(PDX911::API.fetch_response)
+      new_dispatches_count = 0
       PDX911::Database.connect do |db|
         
         xml.elements.each('feed/entry') do |entry_node|
@@ -19,10 +20,14 @@ module PDX911
               date:        dd_nodes[4].text                                                     ,
               location:    entry_node.elements['georss:point'].text.gsub(' ', ',')
             })
+            new_dispatches_count += 1
           end
         end
       
       end
+      logger.info "New dispatches added: #{new_dispatches_count}"
+    rescue => e
+      logger.error e
     end
     
     
