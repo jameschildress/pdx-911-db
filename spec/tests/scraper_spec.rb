@@ -47,21 +47,21 @@ describe PDX911::Scraper do
       @dispatches[1].address.must_equal     '19400 BLOCK OF E BURNSIDE ST, GRESHAM, OR'
       @dispatches[1].category_id.must_equal  @categories[1].id
       @dispatches[1].agency_id.must_equal    @agencies[1].id
-      @dispatches[0].location.must_equal    '(45.51701,-122.463297)'
+      @dispatches[1].location.must_equal    '(45.51701,-122.463297)'
       DateTime.parse(@dispatches[1].date).must_equal DateTime.parse('2013-12-16T16:01:01.0-08:00')
       
       @dispatches[2].uid.must_equal         'PP13000410477'
       @dispatches[2].address.must_equal     '1100 BLOCK OF NE 80TH AVE, PORTLAND, OR'
       @dispatches[2].category_id.must_equal  @categories[1].id
       @dispatches[2].agency_id.must_equal    @agencies[0].id
-      @dispatches[0].location.must_equal    '(45.531446,-122.580687)'
+      @dispatches[2].location.must_equal    '(45.531446,-122.580687)'
       DateTime.parse(@dispatches[2].date).must_equal DateTime.parse('2013-12-16T15:31:09.0-08:00')
       
       @dispatches[3].uid.must_equal         'PP13000410491'
       @dispatches[3].address.must_equal     '17100 BLOCK OF SE POWELL BLVD, PORTLAND, OR'
       @dispatches[3].category_id.must_equal  @categories[0].id
       @dispatches[3].agency_id.must_equal    @agencies[0].id
-      @dispatches[0].location.must_equal    '(45.491989,-122.488314)'
+      @dispatches[3].location.must_equal    '(45.491989,-122.488314)'
       DateTime.parse(@dispatches[3].date).must_equal DateTime.parse('2013-12-16T15:23:32.0-08:00')
     end
   
