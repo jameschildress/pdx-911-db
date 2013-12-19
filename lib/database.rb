@@ -4,8 +4,10 @@ module PDX911
 
 
     CONNECTION_SETTINGS = {
-      host:   'localhost',
-      dbname: 'pdx911_dev'
+      host:     'localhost',
+      dbname:   ENV['PDX911_DATABASE_NAME'],
+      user:     ENV['PDX911_DATABASE_USER'],
+      password: ENV['PDX911_DATABASE_PASSWORD']
     }
 
 
