@@ -58,9 +58,14 @@ module PDX911
     end
     
     def self.create db, hash
-      columns = hash.keys.join(', ')
-      placeholders = hash.size.times.map { |i| "$#{i + 1}" }.join(', ')
-      init_from_result db.exec_params("INSERT INTO #{table_name} (#{columns}) VALUES (#{placeholders})", hash.values)
+      columns = hash.keys.join(',')
+      placeholders = hash.size.times.map { |i| "$#{i + 1}" }.join(',')
+      init_from_result db.exec_params("INSERT INTO #{table_name} (#{columns}) VALUES (#{placeholders}) RETURNING *", hash.values)
+    end
+    
+    def self.find_or_create_by_index db, value
+      result = find_by_index(db, value)
+      result.empty? ? create(db, { index_column_name => value }) : result
     end
 
     
@@ -77,6 +82,10 @@ module PDX911
         "#{column}: #{send(column)}"
       end
       "<#{self.class} {#{attrs.join(', ')}}>"
+    end
+    
+    def to_s
+      inspect
     end
     
     

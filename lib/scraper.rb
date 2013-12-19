@@ -11,13 +11,13 @@ module PDX911
           dd_nodes = REXML::Document.new(CGI.unescapeHTML(entry_node.elements['content'].text)).get_elements('dl/dd')
           uid = dd_nodes[0].text
           if PDX911::Dispatch.find_by_index(db, uid).empty?
-            PDX911::Dispatch.create({
-              uid:         uid                                                                ,
-              category_id: PDX911::Category.find_or_create_by_index(db, dd_nodes[1].text).id  ,
-              address:     dd_nodes[2].text                                                   ,
-              agency_id:   PDX911::Agency.find_or_create_by_index(db, dd_nodes[3].text).id    ,
-              date:        dd_nodes[4].text                                                   ,
-              location:    entry_node.elements['georss:point'].text.gsub(' ', ', ')
+            PDX911::Dispatch.create(db, {
+              uid:         uid                                                                  ,
+              category_id: PDX911::Category.find_or_create_by_index(db, dd_nodes[1].text)[0].id ,
+              address:     dd_nodes[2].text                                                     ,
+              agency_id:   PDX911::Agency.find_or_create_by_index(db, dd_nodes[3].text)[0].id   ,
+              date:        dd_nodes[4].text                                                     ,
+              location:    entry_node.elements['georss:point'].text.gsub(' ', ',')
             })
           end
         end
