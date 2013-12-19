@@ -56,6 +56,12 @@ module PDX911
     def self.find_by_id db, value
       init_from_result db.exec_params("SELECT * FROM #{table_name} WHERE id IN ($1)", [value])      
     end
+    
+    def self.create db, hash
+      columns = hash.keys.join(', ')
+      placeholders = hash.size.times.map { |i| "$#{i + 1}" }.join(', ')
+      init_from_result db.exec_params("INSERT INTO #{table_name} (#{columns}) VALUES (#{placeholders})", hash.values)
+    end
 
     
     
