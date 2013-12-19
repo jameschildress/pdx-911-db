@@ -35,7 +35,7 @@ module PDX911
       schema_string = schema.merge({ id: 'SERIAL PRIMARY KEY' }).map { |k, v| "#{k} #{v}" }.join(', ')
       db.exec("DROP TABLE IF EXISTS #{table_name}") if force_drop
       db.exec "CREATE TABLE #{table_name} ( #{schema_string} )"
-      db.exec "CREATE UNIQUE INDEX ON #{table_name} (#{index_column_name})"
+      db.exec "CREATE UNIQUE INDEX #{table_name}_#{index_column_name}_idx ON #{table_name} (#{index_column_name})"
     end
     
     # Iterate through the rows of a PG::Result and return an array of Records.
