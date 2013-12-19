@@ -1,17 +1,14 @@
 describe PDX911::Scraper do
   
   describe "run()" do
-
-
+  
+  
     
     before do
       # Reset database
       PDX911::Database.create_tables true
       # Populate from sample data
-      sample_data = File.read("#{__dir__}/../sample_data/one.xml")
-      PDX911::API.stub :fetch_response, sample_data do
-        PDX911::Scraper.run
-      end
+      scrape_sample_data :one
       # Get records
       PDX911::Database.connect do |db|
         @categories = PDX911::Category.all(db)
@@ -33,6 +30,8 @@ describe PDX911::Scraper do
       @agencies[0].name.must_equal 'Portland Police'
       @agencies[1].name.must_equal 'Gresham Police'
     end
+
+
     
     it "creates a Dispatch for every entry" do
       @dispatches.size.must_equal 4
@@ -67,7 +66,18 @@ describe PDX911::Scraper do
     end
   
   
-  
+    
+    it "does not create records that already exist" do
+      scrape_sample_data :one
+      PDX911::Database.connect do |db|
+        PDX911::Category.all(db).size.must_equal 2
+        PDX911::Agency.all(db).size.must_equal 2
+        PDX911::Dispatch.all(db).size.must_equal 4
+      end
+    end
+
+
+    
   end
   
 end
