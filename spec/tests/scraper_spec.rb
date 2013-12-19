@@ -93,7 +93,7 @@ describe PDX911::Scraper do
         @categories.size.must_equal 3
         @categories[0].name.must_equal 'UNWANTED PERSON'
         @categories[1].name.must_equal 'THEFT - COLD'
-        @categories[2].name.must_equal 'HAZARD - HAZARDOUS CONDITION'
+        @categories[2].name.must_equal 'TA1 - TRAFFIC ACCIDENT - 1ST RESPONSE (FIRE & EMS)'
       end
 
       it "creates an Agency for every new agency" do

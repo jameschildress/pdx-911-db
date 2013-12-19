@@ -45,10 +45,10 @@
 	
     <entry>
       <id>tag:portlandonline.com,2013-12-16:cad-incidents/PP13000410551</id>
-      <title>HAZARD - HAZARDOUS CONDITION at SE 112TH AVE / SE HOLGATE BLVD, PORTLAND, OR</title>
+      <title>TA1 - TRAFFIC ACCIDENT - 1ST RESPONSE (FIRE &amp; EMS) at SE 112TH AVE / SE HOLGATE BLVD, PORTLAND, OR</title>
       <updated>2013-12-16T16:09:22.0-08:00</updated>
-      <summary>HAZARD - HAZARDOUS CONDITION at SE 112TH AVE / SE HOLGATE BLVD, PORTLAND, OR [Portland Police #PP13000410551]</summary>
-      <category label="HAZARD - HAZARDOUS CONDITION" term="HAZARD - HAZARDOUS CONDITION"/>
+      <summary>TA1 - TRAFFIC ACCIDENT - 1ST RESPONSE (FIRE &amp; EMS) at SE 112TH AVE / SE HOLGATE BLVD, PORTLAND, OR [Portland Police #PP13000410551]</summary>
+      <category label="TA1 - TRAFFIC ACCIDENT - 1ST RESPONSE (FIRE &amp; EMS)" term="TA1 - TRAFFIC ACCIDENT - 1ST RESPONSE (FIRE &amp; EMS)"/>
       <published>2013-12-16T15:54:37.0-08:00</published>
       
       <georss:point>45.489758 -122.548001</georss:point>
@@ -58,7 +58,7 @@
             &lt;dt&gt;ID:&lt;/dt&gt;
             &lt;dd&gt;PP13000410551&lt;/dd&gt;
             &lt;dt&gt;Call Type:&lt;/dt&gt;
-            &lt;dd&gt;HAZARD - HAZARDOUS CONDITION&lt;/dd&gt;
+            &lt;dd&gt;TA1 - TRAFFIC ACCIDENT - 1ST RESPONSE (FIRE &amp; EMS)&lt;/dd&gt;
             &lt;dt&gt;Address:&lt;/dt&gt;
             &lt;dd&gt;SE 112TH AVE / SE HOLGATE BLVD, PORTLAND, OR&lt;/dd&gt;
             &lt;dt&gt;Agency:&lt;/dt&gt;
