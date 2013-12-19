@@ -9,7 +9,10 @@ module PDX911
       PDX911::Database.connect do |db|
         
         xml.elements.each('feed/entry') do |entry_node|
-          dd_nodes = REXML::Document.new(CGI.unescapeHTML(entry_node.elements['content'].text)).get_elements('dl/dd')
+          # Only the < and > characters should be unescaped. All other HTML entities should remain escaped.
+          # This turns out to be more of a pain in the ass than expeected.
+          content = REXML::Text.new(entry_node.elements['content'].text).to_s.gsub('&lt;', '<').gsub('&gt;', '>')
+          dd_nodes = REXML::Document.new(content).get_elements('dl/dd')
           uid = dd_nodes[0].text
           if PDX911::Dispatch.find_by_index(db, uid).empty?
             PDX911::Dispatch.create(db, {
