@@ -125,6 +125,17 @@ describe PDX911::Scraper do
       end
       
     end
+    
+    
+    
+    it "skips entries with a blank category" do
+      scrape_sample_data :three
+      PDX911::Database.connect do |db|
+        PDX911::Category.all(db).size.must_equal @categories.size
+        PDX911::Agency.all(db).size.must_equal   @agencies.size
+        PDX911::Dispatch.all(db).size.must_equal @dispatches.size
+      end
+    end
 
 
     

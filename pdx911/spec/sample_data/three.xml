@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss">
+	<id>urn:uuid:2c8b4910-e5c4-11de-8a39-0800200c9a66</id>
+	<title>Portland 911 Dispatch Incidents</title>
+	<subtitle>Recent 911 dispatch incidents in Portland, Oregon </subtitle>
+	<link href="http://www.portlandonline.com/scripts/911incidents.cfm" rel="self"/>
+	<updated>2013-12-16T16:20:33.860-08:00</updated>
+	<author>
+		<name>City of Portland</name>
+		<email>cgis@portlandoregon.gov</email>
+	</author>
+	<icon>http://www.portlandonline.com/omf/index.cfm?c=39247&amp;a=87997</icon>
+
+	
+	
+	<entry>
+		<id>tag:portlandoregon.gov,2013-12-20:cad-incidents/RP13000079131</id>
+		<title> at 700 BLOCK OF NE BUFFALO ST, PORTLAND, OR</title>
+		<updated>2013-12-20T09:57:15.0-08:00</updated>
+		<summary> at 700 BLOCK OF NE BUFFALO ST, PORTLAND, OR [Portland Fire #RP13000079131]</summary>
+		<category label="" term=""/>
+		<published>2013-12-20T09:46:10.0-08:00</published>
+		
+		<georss:point>45.574910 -122.657359</georss:point>
+		
+		<content type="html">
+				&lt;dl&gt;
+					&lt;dt&gt;ID:&lt;/dt&gt;
+					&lt;dd&gt;RP13000079131&lt;/dd&gt;
+					&lt;dt&gt;Call Type:&lt;/dt&gt;
+					&lt;dd&gt;&lt;/dd&gt;
+					&lt;dt&gt;Address:&lt;/dt&gt;
+					&lt;dd&gt;700 BLOCK OF NE BUFFALO ST, PORTLAND, OR&lt;/dd&gt;
+					&lt;dt&gt;Agency:&lt;/dt&gt;
+					&lt;dd&gt;Portland Fire&lt;/dd&gt;
+					&lt;dt&gt;Last Updated:&lt;/dt&gt;
+					&lt;dd&gt;12/20/13 9:57:15 AM PST&lt;/dd&gt;
+				&lt;/dl&gt;
+		</content>
+
+
+	</entry>
+  
+	
+</feed>
