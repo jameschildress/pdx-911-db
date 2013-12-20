@@ -14,10 +14,12 @@ module PDX911
           content = REXML::Text.new(entry_node.elements['content'].text).to_s.gsub('&lt;', '<').gsub('&gt;', '>')
           dd_nodes = REXML::Document.new(content).get_elements('dl/dd')
           uid = dd_nodes[0].text
-          if PDX911::Dispatch.find_by_index(db, uid).empty?
+          # Ensure that category name is not nil. TODO: move this into record validation.
+          category_name = dd_nodes[1].text
+          if PDX911::Dispatch.find_by_index(db, uid).empty? && category_name
             PDX911::Dispatch.create(db, {
               uid:         uid                                                                  ,
-              category_id: PDX911::Category.find_or_create_by_index(db, dd_nodes[1].text)[0].id ,
+              category_id: PDX911::Category.find_or_create_by_index(db, category_name)[0].id    ,
               address:     dd_nodes[2].text                                                     ,
               agency_id:   PDX911::Agency.find_or_create_by_index(db, dd_nodes[3].text)[0].id   ,
               date:        dd_nodes[4].text                                                     ,
